@@ -7,7 +7,6 @@ import { FC } from 'react';
 
 const AllEventsPage: FC = () => {
   const router = useRouter();
-
   const eventId = router.query.id;
   const event = getEventById(eventId);
 

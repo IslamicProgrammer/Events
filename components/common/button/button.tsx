@@ -4,14 +4,23 @@ import calsses from './button.module.css';
 
 interface ButtonProps {
   children: ReactNode;
-  link: string;
+  link?: string;
+  onClick?: () => void;
 }
 
-const Button: FC<ButtonProps> = ({ children, link }) => {
+const Button: FC<ButtonProps> = ({ children, link, onClick }) => {
+  if (link) {
+    return (
+      <Link href={link}>
+        <a className={calsses.btn}>{children}</a>
+      </Link>
+    );
+  }
+
   return (
-    <Link href={link}>
-      <a className={calsses.btn}>{children}</a>
-    </Link>
+    <button onClick={onClick} className={calsses.btn}>
+      {children}
+    </button>
   );
 };
 
