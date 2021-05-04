@@ -6,19 +6,35 @@
   margin: 1rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
 .item img {
-  width: 100%;
+  flex: 0.4;
   object-fit: cover;
-  height: 10rem;
+  height: 260px !important;
+}
+
+.items {
+  flex: 0.6;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .content {
   width: 100%;
   padding: 0 1rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summary {
+  text-align: left;
+  width: 100%;
 }
 
 .content h2 {

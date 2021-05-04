@@ -3,7 +3,7 @@ import { ReactNode, FC } from 'react';
 import calsses from './button.module.css';
 
 interface ButtonProps {
-  chidling: ReactNode;
+  children: ReactNode;
   link: string;
 }
 
